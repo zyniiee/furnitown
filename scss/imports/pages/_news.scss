@@ -1,0 +1,112 @@
+.main__news {
+    .news {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $blue-cl;
+        background: url(../img/news-1.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        .--news {
+            top: 81%;
+        }
+        .--news__nav {
+            height: 100vh;
+        }
+        .news__head {
+            position: relative;
+            padding-bottom: 75px;
+            &--title {
+                font-family: "fmain";
+                font-size: 26px;
+                color: white;
+                padding-top: 160px;
+                line-height: 50px;
+                letter-spacing: 1px;
+                padding-bottom: 30px;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: white;
+                    margin: 30px 0 0 0;
+                }
+            }
+        }
+    }
+    .news__grid {
+        margin-top: -30px;
+        &--content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            width: 100%;
+            .news__info {
+                margin-bottom: 30px;
+                &--img {
+                    height: 215px;
+                    position: relative;
+                    background-color: $gray-cl;
+                    overflow: hidden;
+                    height: 200px;
+                    img {
+                        position: absolute;
+                        transform: scale(1);
+                        width: 100%;
+                        height: 360px;
+                        max-width: initial;
+                        object-fit: cover;
+                        transform-origin: 50% 65%;
+                        transition: transform 0.5s, filter 3s ease-in-out;
+                    }
+                    &:hover img {
+                        filter: brightness(100%);
+                        transform: scale(1.2);
+                        opacity: 0.8;
+                    }
+                }
+                &--content {
+                    line-height: 20px;
+                    a {
+                        font-size: 12px;
+                        font-weight: bold;
+                        padding: 20px 0;
+                    }
+                    p {
+                        font-size: 12px;
+                        padding-bottom: 20px;
+                    }
+                }
+                &--more {
+                    font-size: 11px;
+                    font-weight: bold;
+                    padding-bottom: 15px;
+                    a {
+                        display: flex;
+                        margin: initial;
+                        img {
+                            margin: auto 0px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include tablet {
+        .news {
+            .--news {
+                top: 73%;
+            }
+        }
+    }
+    @include mobile {
+        width: 100%;
+        .news__grid {
+            &--content {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

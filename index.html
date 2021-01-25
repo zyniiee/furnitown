@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FURNITOWN</title>
+        <link rel="icon" href="#" />
+        <meta name="title" content="" />
+        <meta name="description" content="" />
+        <meta property="og:locale" content="en_us" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Home" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="dest/style.css" />
+        <link rel="stylesheet" href="dest/fonts.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <nav class="main__nav">
+                    <ul>
+                        <li><a href="index.html">FURNITOWN</a></li>
+                        <li>
+                            <a href="#"
+                                >SHARE
+                                <img src="img/black-arrow.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="mob__nav">
+                    <div class="menu__mob">
+                        <div
+                            class="toggle__menu"
+                            id="toggle"
+                            onclick="menuToggle(this)"
+                        >
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                        <div class="mob__menu">MENU</div>
+                    </div>
+                    <div class="mob__logo">
+                        <a href="#"><img src="img/logo.png" /></a>
+                    </div>
+                </nav>
+            </div>
+            <div class="hidden__nav--mobile">
+                <div class="hidden__nav--top">
+                    <div class="top__title">
+                        <a href="index.html">FURNITOWN</a>
+                    </div>
+                    <div class="top__sns">
+                        <p>FOLLOW US</p>
+                        <a href="#email"><img src="img/email.png" /></a>
+                        <a class="link" href="#">
+                            <img src="img/fb.png" alt=""
+                        /></a>
+                    </div>
+                </div>
+                <div class="hidden__nav--main">
+                    <div class="main__left">
+                        <span class="left__logo">
+                            <a href="index.html"
+                                ><img src="img/yellow-logo.png" /></a
+                        ></span>
+                    </div>
+                    <div class="main__list">
+                        <ul>
+                            <li><a href="index.html">FURNITOWN</a></li>
+                            <li><a href="product.html">SẢN PHẨM</a></li>
+                            <li><a href="service.html">DỊCH VỤ</a></li>
+                            <li><a href="project.html">DỰ ÁN</a></li>
+                            <li><a href="contact.html">LIÊN HỆ</a></li>
+                            <li class="--smaller">
+                                <a href="news.html">FAQS | TIN TỨC</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="scroll__nav">
+            <ul>
+                <li><a href="index.html">FURNITOWN</a></li>
+                <li><a href="product.html">SẢN PHẨM</a></li>
+                <li><a href="service.html">DỊCH VỤ</a></li>
+                <li>
+                    <a href="index.html">
+                        <img src="img/logofull-white.png" class="logo_svg"
+                    /></a>
+                </li>
+                <li><a href="project.html">DỰ ÁN</a></li>
+                <li><a href="news.html">TIN TỨC</a></li>
+                <li><a href="contact.html">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <main class="mainwrapper homepage">
+            <section class="home__banner">
+                <div class="menu">
+                    <div class="menu__btn">
+                        <img src="img/yellow-logo.png" class="logo__yellow" />
+                        <div class="toggle__menu">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="menu__btn--hover" onclick="clickMenu(this)">
+                        <span class="title">MENU</span>
+                        <div class="logo__black">
+                            <img src="img/about/logofull.png" />
+                        </div>
+                    </div>
+                </div>
+                <nav class="hidden__nav">
+                    <div class="hidden__nav--top">
+                        <div class="top__title">
+                            <a href="index.html">FURNITOWN</a>
+                        </div>
+                        <div class="top__sns">
+                            <p>FOLLOW US</p>
+                            <a href="#email"><img src="img/email.png" /></a>
+                            <a href="#"> <img src="img/fb.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="hidden__nav--main">
+                        <div class="main__left">
+                            <span class="left__logo">
+                                <a href="index.html"
+                                    ><img src="img/yellow-logo.png" /></a
+                            ></span>
+                            <span class="overlay"></span>
+                        </div>
+                        <div class="main__list">
+                            <ul>
+                                <li><a href="index.html">FURNITOWN</a></li>
+                                <li><a href="product.html">SẢN PHẨM</a></li>
+                                <li><a href="service.html">DỊCH VỤ</a></li>
+                                <li><a href="project.html">DỰ ÁN</a></li>
+                                <li><a href="contact.html">LIÊN HỆ</a></li>
+                                <li class="--smaller">
+                                    <a href="news.html">FAQS | TIN TỨC</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div
+                    class="banner__wrap main-carousel"
+                    data-flickity='{ "wrapAround": true }'
+                >
+                    <div class="banner carousel-cell">
+                        <img
+                            src="img/homepage-1.jpg"
+                            alt="FURNITOWN"
+                            class="banner__bg"
+                        />
+                        <div class="container">
+                            <div class="banner__text">
+                                <h2 class="banner__title">FURNITOWN</h2>
+                                <p class="banner__sum">
+                                    NƠI TÌM THẤY MẢNH GHÉP NỘI THẤT CÒN THIẾU
+                                    CHO NGÔI NHÀ CỦA BẠN
+                                </p>
+                                <a href="about-us.html" class="banner__about"
+                                    >VỀ CHÚNG TÔI</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner carousel-cell">
+                        <img
+                            src="img/slider-1.jpg"
+                            alt="FURNITOWN"
+                            class="banner__bg"
+                        />
+                        <div class="container">
+                            <div class="banner__text">
+                                <h2 class="banner__title">FURNITOWN</h2>
+                                <p class="banner__sum">
+                                    NƠI TÌM THẤY MẢNH GHÉP NỘI THẤT CÒN THIẾU
+                                    CHO NGÔI NHÀ CỦA BẠN
+                                </p>
+                                <a href="about-us.html" class="banner__about"
+                                    >VỀ CHÚNG TÔI</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner carousel-cell">
+                        <img
+                            src="img/slider-2.jpg"
+                            alt="FURNITOWN"
+                            class="banner__bg"
+                        />
+                        <div class="container">
+                            <div class="banner__text">
+                                <h2 class="banner__title">FURNITOWN</h2>
+                                <p class="banner__sum">
+                                    NƠI TÌM THẤY MẢNH GHÉP NỘI THẤT CÒN THIẾU
+                                    CHO NGÔI NHÀ CỦA BẠN
+                                </p>
+                                <a href="about-us.html" class="banner__about"
+                                    >VỀ CHÚNG TÔI</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner__bottom">
+                    <div class="container-fluid">
+                        <div class="bottom__left"></div>
+                        <div class="bottom__center">
+                            <div class="line">
+                                <img src="img/line.png" />
+                            </div>
+                            <div class="mouse">
+                                <img src="img/mouse.png" />
+                            </div>
+                            <p>SẢN PHẨM FURNITOWN</p>
+                        </div>
+                        <div class="bottom-control">
+                            <div class="button --prev" onclick="preBtn(this)">
+                                <img src="img/left-arrow2.svg" alt="" />
+                            </div>
+                            <div class="button --next" onclick="nextBtn(this)">
+                                <img src="img/right-arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sum">
+                <div class="container">
+                    <div class="banner__text --mobile">
+                        <h2 class="banner__title">FURNITOWN</h2>
+                        <p class="banner__sum">
+                            NƠI TÌM THẤY MẢNH GHÉP NỘI THẤT CÒN THIẾU CHO NGÔI
+                            NHÀ CỦA BẠN
+                        </p>
+                        <a href="about-us.html" class="banner__about"
+                            >VỀ CHÚNG TÔI</a
+                        >
+                    </div>
+                    <div class="first row pdSection">
+                        <div class="work col-lg-6 col-sm-12">
+                            <p>
+                                “ Hãy đến & khám phá <b>Funitown</b>, để có cơ
+                                hội thoả sức lựa chọn về màu sắc và kiểu dáng
+                                trong thế giới nội thất; cùng sự an tâm trong
+                                việc tư vấn chu đáo, tận tình của đội ngũ nhân
+                                viên. ”
+                            </p>
+                            <div class="work__img">
+                                <h3 class="title">PHÒNG LÀM VIỆC</h3>
+                                <div class="sum__img">
+                                    <img
+                                        src="img/homepage-2.jpg"
+                                        alt="FURNITOWN"
+                                        class="sum__bg"
+                                    />
+                                    <div class="des --blue">
+                                        <div class="des__icon">
+                                            <img
+                                                src="img/white-logo.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="des__sum">
+                                            “Không gian sáng tạo cho sự thành
+                                            đạt.”
+                                        </p>
+                                        <div class="des__more">
+                                            <a href="#">MORE </a>
+                                            <span
+                                                ><img src="img/white-arrow.png"
+                                            /></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="living col-lg-6 col-sm-12">
+                            <h3 class="title">PHÒNG KHÁCH</h3>
+                            <div class="sum__img">
+                                <img src="img/homepage-3.jpg" alt="FURNITOWN" />
+                                <div class="des --yellow">
+                                    <div class="des__icon">
+                                        <img src="img/white-logo.png" alt="" />
+                                    </div>
+                                    <p class="des__sum">
+                                        “Không gian sáng tạo cho sự thành đạt.”
+                                    </p>
+                                    <div class="des__more">
+                                        <a href="#">MORE </a>
+                                        <span
+                                            ><img src="img/white-arrow.png"
+                                        /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second row pdSection">
+                        <div class="kitchen col-12">
+                            <h3 class="title">NHÀ BẾP</h3>
+                            <div class="sum__img">
+                                <img src="img/homepage-5.jpg" alt="FURNITOWN" />
+                                <div class="des --blue">
+                                    <div class="des__icon">
+                                        <img src="img/white-logo.png" alt="" />
+                                    </div>
+                                    <p class="des__sum">
+                                        “Không gian sáng tạo cho sự thành đạt.”
+                                    </p>
+                                    <div class="des__more">
+                                        <a href="#">MORE </a>
+                                        <span
+                                            ><img src="img/white-arrow.png"
+                                        /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third row pdSection">
+                        <div class="bedroom col-lg-6 col-sm-12">
+                            <h3 class="title">PHÒNG NGỦ</h3>
+                            <div class="sum__img">
+                                <img src="img/homepage-4.jpg" alt="FURNITOWN" />
+                                <div class="des --blue">
+                                    <div class="des__icon">
+                                        <img src="img/white-logo.png" alt="" />
+                                    </div>
+                                    <p class="des__sum">
+                                        “Không gian sáng tạo cho sự thành đạt.”
+                                    </p>
+                                    <div class="des__more">
+                                        <a href="#">MORE </a>
+                                        <span
+                                            ><img src="img/white-arrow.png"
+                                        /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bathroom col-lg-6 col-sm-12">
+                            <h3 class="title">NHÀ TẮM</h3>
+                            <div class="sum__img">
+                                <img src="img/homepage-6.jpg" alt="FURNITOWN" />
+                                <div class="des --yellow">
+                                    <div class="des__icon">
+                                        <img src="img/white-logo.png" alt="" />
+                                    </div>
+                                    <p class="des__sum">
+                                        “Không gian sáng tạo cho sự thành đạt.”
+                                    </p>
+                                    <div class="des__more">
+                                        <a href="#">MORE </a>
+                                        <span
+                                            ><img src="img/white-arrow.png"
+                                        /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content col-sm-12">
+                                <p>
+                                    “Hãy đến & khám phá <span>Funitown</span>,
+                                    để có cơ hội thoả sức lựa chọn về màu sắc và
+                                    kiểu dáng trong thế giới nội thất; cùng sự
+                                    an tâm trong việc tư vấn chu đáo, tận tình
+                                    của đội ngũ nhân viên."
+                                </p>
+                                <div class="pen">
+                                    <img src="img/pen.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer__homepage">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.png" />
+                </div>
+                <div class="info">
+                    THỜI GIAN MỞ CỬA: 8H - 18H - THỨ 2 ĐẾN CHỦ NHẬT <br />
+                    SỐ 7/22A, ẤP 6, XÃ ĐÔNG THẠCH, HUYỆN HÓC MÔN, THÀNH PHỐ HỒ
+                    CHÍ MINH <br />
+                    HOTLINE: 0937.188.938 <br />
+                    EMAIL: NOITHATFURNITOWN@GMAIL.COM
+                </div>
+                <div class="toTop">BACK TO TOP</div>
+            </div>
+        </footer>
+        <script src="dest/jsmain.min.js"></script>
+        <script src="dest/main.js"></script>
+    </body>
+</html>

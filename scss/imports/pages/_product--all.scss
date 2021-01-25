@@ -1,0 +1,221 @@
+.products--all {
+    padding-top: 60px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $blue-cl;
+    background: url(../img/product-all.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    .--product {
+        top: 84%;
+    }
+    .--products {
+        height: 700px;
+    }
+    .products--all__head {
+        font-family: "main";
+        font-size: 24px;
+        line-height: 50px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: right;
+        padding: 100px 0;
+    }
+}
+.section__number {
+    font-size: 90px;
+    font-family: "main";
+    line-height: 135px;
+    color: #c48b2c;
+}
+.section--main--left {
+    display: flex;
+    align-items: center;
+    .section__number {
+        font-size: 90px;
+        font-family: "main";
+        line-height: 135px;
+        color: #c48b2c;
+    }
+    .section__sum {
+        h2 {
+            font-size: 18px;
+            font-family: "fmain";
+            line-height: 40px;
+        }
+        p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}
+.grid__section {
+    padding-bottom: 80px;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        .carousel-cell--grid {
+            position: relative;
+            &:not(:nth-child(3n)) {
+                &:after {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: #ddd;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: -15px;
+                }
+            }
+            .flick__img {
+                overflow: hidden;
+                position: relative;
+                height: 350px;
+                img {
+                    position: absolute;
+                    transform: scale(1);
+                    width: 100%;
+                    height: 360px;
+                    max-width: initial;
+                    object-fit: cover;
+                    transform-origin: 50% 65%;
+                    transition: transform 0.5s, filter 3s ease-in-out;
+                }
+                &:hover img {
+                    filter: brightness(100%);
+                    transform: scale(1.2);
+                    opacity: 0.8;
+                }
+            }
+            .flick__sum {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &--title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 40px;
+                }
+                &--price {
+                    font-size: 12px;
+                    line-height: 40px;
+                }
+                &--detail {
+                    display: flex;
+                    align-items: center;
+                    .detail__img {
+                        padding-right: 8px;
+                        width: 20px;
+                    }
+                    .detail__sum {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+                &--left {
+                    padding-bottom: 45px;
+
+                    .flick__sum--title {
+                        font-size: 18px;
+                        font-weight: bold;
+                        line-height: 40px;
+                    }
+                    .flick__sum--price {
+                        font-size: 12px;
+                        line-height: 40px;
+                    }
+                    .flick__sum--detail {
+                        display: flex;
+                        align-items: center;
+                        .detail__img {
+                            padding-right: 8px;
+                            width: 20px;
+                        }
+                        .detail__sum {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    margin-bottom: 60px;
+    .all__more {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+        transition: 0.5s;
+        &--img {
+            width: 30px;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+        &--title {
+            font-size: 11px;
+            line-height: 40px;
+        }
+        &:hover {
+            opacity: 1;
+            transition: 0.5s;
+        }
+    }
+}
+@include mobile {
+    .products--all {
+        .products--all__head {
+            font-size: 20px;
+        }
+    }
+    .grid__section {
+        .container {
+            .grid__section--main {
+                .section--main--left {
+                    .section__number {
+                        font-size: 70px;
+                    }
+                }
+            }
+            .section__flick {
+                .grid {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    .flick__img {
+                        height: 250px;
+                    }
+                    .flick__sum {
+                        &--left {
+                            padding-bottom: 30px;
+                        }
+                    }
+                    .carousel-cell--grid {
+                        position: relative;
+                        &:not(:nth-child(3n)) {
+                            &:after {
+                                content: "";
+                                height: 100%;
+                                width: 0px;
+                                background: #ddd;
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                right: -15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

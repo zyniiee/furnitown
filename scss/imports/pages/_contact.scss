@@ -1,0 +1,137 @@
+.contact {
+    width: 100%;
+    height: 100%;
+    background-color: #dbd8c9;
+    background: url(../img/contact.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    .--contact {
+        top: 30%;
+    }
+    .contact__main {
+        position: relative;
+        padding: 130px 0;
+        .title {
+            font-size: 12px;
+            font-weight: bold;
+            color: $yellow-cl;
+            padding-bottom: 10px;
+            line-height: 8px;
+        }
+        p {
+            font-size: 12px;
+            color: white;
+            letter-spacing: 1px;
+            line-height: 22px;
+        }
+        .details {
+            padding: 0 90px;
+            .ours {
+                margin-bottom: 30px;
+                &__contact {
+                    padding-left: 30px;
+                    &--details {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+            .form__info {
+                .contact__us {
+                    width: 40%;
+                    padding-bottom: 20px;
+                }
+            }
+            form {
+                column-count: 2;
+                column-gap: 60px;
+                .content-form {
+                    font-size: 12px;
+                    color: white;
+                    letter-spacing: 1px;
+                    line-height: 22px;
+                    padding-bottom: 15px;
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 10px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        border-bottom: 1px solid $yellow-cl;
+                        background-color: transparent;
+                        color: white;
+                        transition: 0.5s;
+                        &:focus {
+                            transition: 0.5s;
+                            outline: none;
+                        }
+                    }
+                    textarea {
+                        height: 133px;
+                        resize: none;
+                    }
+                }
+                .send {
+                    position: absolute;
+                    right: 15px;
+                    button {
+                        cursor: pointer;
+                        padding: 10px 30px;
+                        background-color: $yellow-cl;
+                        border: 1px solid $yellow-cl;
+                        font-weight: bold;
+                        color: white;
+                        &:hover {
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include tablet {
+        .contact__main {
+            .title {
+                margin-top: 15px;
+            }
+            .details {
+                .form__info {
+                    .contact__us {
+                        width: 100%;
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                    }
+                }
+                .ours__contact {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .contact__main {
+            .title {
+                padding-top: 15px;
+            }
+            .details {
+                padding: 0 15px;
+                .ours__contact {
+                    padding-left: 15px;
+                    padding-top: 15px;
+                }
+                .form__info {
+                    .contact__us {
+                        width: 100%;
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                    }
+                }
+                form {
+                    column-count: 1;
+                }
+            }
+        }
+    }
+}

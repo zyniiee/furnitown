@@ -1,0 +1,488 @@
+.homepage {
+    .home__banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        .banner__wrap {
+            width: 100%;
+            height: 100%;
+            .banner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &__bg {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .container {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    .banner__text {
+                        color: white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .banner__title {
+                            line-height: 0.5;
+                            text-align: center;
+                            font-size: 80px;
+                            font-family: "main";
+                            transition-delay: 0.8s;
+                            opacity: 0;
+                            transform: translateY(60px);
+                            transition: 0.6s;
+
+                            &::after {
+                                content: "";
+                                width: 100%;
+                                height: 1px;
+                                background-color: white;
+                                display: block;
+                                margin: 30px auto;
+                                transition: width 0.4s;
+                                @include mobile {
+                                    width: 100%;
+                                    background-color: black;
+                                }
+                            }
+                        }
+                        .banner__sum {
+                            font-size: 12px;
+                            font-family: Arial;
+                            font-weight: bold;
+                            letter-spacing: -0.25px;
+                            transition: 0.8s;
+                            opacity: 0;
+                            transform: translateY(30px);
+                            transition-delay: 0.5s;
+                        }
+                        .banner__about {
+                            font-family: "mh";
+                            font-weight: 900;
+                            background-color: black;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            padding: 10px 20px;
+                            color: white;
+                            font-size: 11px;
+                            margin-top: 40px;
+                            letter-spacing: -0.25px;
+                            transition: 0.8s;
+                            transition-delay: 0.5s;
+                            opacity: 0;
+                            transform: translateY(30px);
+                            &:hover {
+                                background-color: white;
+                                color: black;
+                                transition: 0.4s;
+                            }
+                        }
+                    }
+                }
+                &.is-selected {
+                    .container {
+                        .banner__text {
+                            .banner__title {
+                                transition-delay: 0.8s;
+                                opacity: 1;
+                                transform: translateY(0px);
+                                transition: 0.8s;
+                            }
+                            .banner__about,
+                            .banner__sum {
+                                opacity: 1;
+                                transform: translateY(0px);
+                                transition: 0.7s;
+                                transition-delay: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .banner__bottom {
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                .bottom__center {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 10px;
+                    .mouse {
+                        padding-top: 8px;
+                    }
+                    p {
+                        font-family: "mh";
+                        font-weight: 900;
+                        padding-top: 8px;
+                        font-size: 11px;
+                    }
+                }
+                .bottom-control {
+                    display: flex;
+                    margin-bottom: 10px;
+                    .button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: solid 1px black;
+                        padding: 4px 20px;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        img {
+                            width: 30px;
+                        }
+                        &:last-child {
+                            border-left: 0;
+                        }
+                        &:hover {
+                            background-color: white;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sum {
+        width: 100%;
+        margin-top: 45px;
+        .--mobile {
+            color: black;
+            display: none;
+            text-align: center;
+            .banner__title {
+                line-height: 20px;
+                text-align: center;
+                font-size: 60px;
+                font-family: "main";
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                    display: block;
+                    margin: 30px auto;
+                    transition: width 0.4s;
+                }
+            }
+            .banner__sum {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 26px;
+            }
+            .banner__about {
+                font-family: "mh";
+                font-weight: 900;
+                background-color: black;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 10px 20px;
+                color: white;
+                font-size: 11px;
+                line-height: 20px;
+                display: table;
+                margin: 0 auto;
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    transition: 0.4s;
+                }
+            }
+
+            @include mobile {
+                display: block;
+                .banner__title {
+                    font-size: 40px;
+                    &::after {
+                        margin: 20px 0 15px 0;
+                    }
+                }
+                .banner__sum {
+                    font-size: 11px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .first {
+            .work {
+                p {
+                    b {
+                        font-weight: bold;
+                    }
+                    width: 380px;
+                    font-size: 12px;
+                    line-height: 40px;
+                }
+                .work__img {
+                    padding-top: 80px;
+                }
+            }
+            .living {
+                .sum__img {
+                    height: 460px;
+                }
+            }
+        }
+        .kitchen {
+            .sum__img {
+                height: 370px;
+            }
+        }
+        .third {
+            z-index: 1;
+            .bedroom {
+                .sum__img {
+                    height: 560px;
+                }
+            }
+            .bathroom {
+                .sum__img {
+                    height: 350px;
+                }
+                .content {
+                    position: relative;
+                    .pen {
+                        position: absolute;
+                        right: -50px;
+                        top: 140px;
+                    }
+                    p {
+                        position: absolute;
+                        z-index: 1;
+                        font-family: "mainI";
+                        font-size: 15px;
+                        line-height: 40px;
+                        text-align: right;
+                        color: white;
+                        padding-top: 90px;
+                        span {
+                            color: $yellow-cl;
+                        }
+                    }
+                }
+            }
+        }
+        .sum__img {
+            height: 260px;
+            width: 100%;
+            position: relative;
+            .des {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                &__sum {
+                    color: white;
+                    font-size: 12px;
+                    line-height: 40px;
+                    margin: 0 auto;
+                }
+                &__icon {
+                    img {
+                        top: initial;
+                        left: initial;
+                        position: initial;
+                        transform: initial;
+                        width: initial;
+                        height: initial;
+                    }
+                }
+                &__more {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 auto;
+                    a {
+                        color: white;
+                        font-size: 11px;
+                        line-height: 40px;
+                        font-weight: bold;
+                    }
+                    img {
+                        cursor: pointer;
+                        padding-left: 8px;
+                        top: initial;
+                        left: initial;
+                        position: initial;
+                        transform: initial;
+                        width: initial;
+                        height: initial;
+                    }
+                }
+            }
+            &:hover .des {
+                opacity: 1;
+            }
+            .sum__bg {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                transition: 0.5s ease;
+                backface-visibility: hidden;
+            }
+            &:hover .sum__bg {
+                opacity: 0.3;
+            }
+        }
+    }
+    @include desktop {
+        .home__banner {
+            height: 700px;
+        }
+    }
+    @include tablet {
+        .home__banner {
+            height: 500px;
+            .banner__wrap {
+                .menu {
+                    width: 120px;
+                    height: 120px;
+                }
+                .banner {
+                    &__text {
+                        .banner__title {
+                            font-size: 70px;
+                        }
+                    }
+                }
+                .banner__bottom {
+                    .bottom__center {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sum {
+            .living {
+                padding-top: 60px;
+            }
+            .third {
+                .bathroom {
+                    padding-top: 60px;
+                    margin-bottom: 180px;
+                    .content {
+                        width: 100%;
+                        p {
+                            text-align: center;
+                        }
+                        .pen {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mobile {
+        .pdSection {
+            padding-top: initial;
+        }
+        .home__banner {
+            margin-top: 60px;
+            height: 300px;
+
+            .banner__wrap {
+                .banner {
+                    .container {
+                        .banner__text {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .bottom__center {
+                display: none;
+            }
+        }
+        .menu {
+            display: none;
+        }
+        &.is-selected {
+            .container {
+                .banner__text {
+                    .banner__title {
+                        transition-delay: 0.8s;
+                        opacity: 1;
+                        transform: translateY(0px);
+                        transition: 0.8s;
+                    }
+                    .banner__about,
+                    .banner__sum {
+                        opacity: 1;
+                        transform: translateY(0px);
+                        transition: 0.7s;
+                        transition-delay: 0.5s;
+                    }
+                }
+            }
+        }
+        .sum {
+            .work {
+                p {
+                    display: none;
+                }
+            }
+            .living {
+                padding-top: 60px;
+            }
+            .kitchen {
+                .title {
+                    padding-top: 60px;
+                }
+            }
+            .bedroom {
+                .title {
+                    padding-top: 60px;
+                }
+            }
+            .third {
+                .bathroom {
+                    padding-top: 60px;
+                    .content {
+                        width: 100%;
+                        p {
+                            font-size: 11px;
+                            position: initial;
+                            text-align: center;
+                        }
+                        .pen {
+                            right: 0;
+                            position: initial;
+                            padding-top: 20px;
+                            padding-bottom: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

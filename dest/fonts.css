@@ -1,0 +1,96 @@
+/* @font-face {
+    font-family: 'fmain';
+    src: url('../fonts/../fonts/Barlow-Regular.woff2') format('woff2'),
+        url('../fonts/../fonts/Barlow-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'bb';
+    src: url('../fonts/../fonts/Barlow-Bold.woff2') format('woff2'),
+        url('../fonts/../fonts/Barlow-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'l';
+    src: url('../fonts/../fonts/LaloGroteskRegular.woff2') format('woff2'),
+        url('../fonts/../fonts/LaloGroteskRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'lm';
+    src: url('../fonts/../fonts/LaloGroteskMedium.woff2') format('woff2'),
+        url('../fonts/../fonts/LaloGroteskMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'h';
+    src: url('../fonts/../fonts/HansonBold.woff2') format('woff2'),
+        url('../fonts/../fonts/HansonBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+ */
+
+/* @font-face {
+    font-family: "main";
+    src: url("/fonts/baskervillebt.woff2") format("woff2"),
+        url("/fonts/baskervillebt.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+} */
+/* @font-face {
+    font-family: "mainI";
+    src: url("/fonts/BaskervilleLight-Italic.woff2") format("woff2"),
+        url("/fonts/BaskervilleLight-Italic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+} */
+@font-face {
+    font-family: "mainI";
+    src: url("/fonts/LibreBaskervilleF-Italic.woff2") format("woff2"),
+        url("/fonts/LibreBaskervilleF-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "main-1";
+    src: url("/fonts/BaskervilleLight.woff2") format("woff2"),
+        url("/fonts/BaskervilleLight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "main";
+    src: url("/fonts/ElleBaskerville.woff2") format("woff2"),
+        url("/fonts/ElleBaskerville.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "mh";
+    src: url("/fonts/NunitoSans-ExtraBold.woff2") format("woff2"),
+        url("/fonts/NunitoSans-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+}

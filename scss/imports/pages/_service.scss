@@ -1,0 +1,124 @@
+main {
+    .service {
+        position: relative;
+        .our__service {
+            h2 {
+                font-family: "main";
+                font-size: 32px;
+                letter-spacing: 1px;
+                padding-bottom: 30px;
+                text-align: center;
+                padding-top: 130px;
+            }
+            .service__img {
+                padding-bottom: 30px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .consultant {
+        &__info {
+            &--left {
+                .consultant__info--title {
+                    font-family: "main";
+                    font-size: 26px;
+                    letter-spacing: 1px;
+                    padding-bottom: 20px;
+                }
+                .consultant__info--sum {
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    line-height: 2;
+                    padding-bottom: 60px;
+                    p {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+            &--right {
+                column-count: 2;
+                column-gap: 30px;
+                padding-top: 75px;
+                .consultant__info--btn {
+                    border: 1px solid black;
+                    font-size: 11px;
+                    font-weight: bold;
+                    padding: 10px 30px;
+                    transition: 0.5s;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover {
+                        transition: 0.5s;
+                        background-color: black;
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .working {
+        &__info {
+            &--main {
+                .working__info--title {
+                    font-family: "main";
+                    font-size: 26px;
+                    letter-spacing: 1px;
+                    padding-bottom: 20px;
+                    text-align: center;
+                    padding-top: 60px;
+                }
+                .working__info--sum {
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    line-height: 2;
+                    padding-bottom: 30px;
+                    text-align: center;
+                }
+            }
+            .working__info--img {
+                padding-bottom: 60px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include tablet {
+        .consultant {
+            &__info {
+                &--right {
+                    padding-top: 0px;
+                    padding-bottom: 45px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .service {
+            position: relative;
+            .our__service {
+                h2 {
+                    font-size: 28px;
+                }
+            }
+        }
+        .consultant {
+            &__info {
+                &--left {
+                    .consultant__info--sum {
+                        padding-bottom: 15px;
+                    }
+                }
+                &--right {
+                    padding-top: 0;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+.--details {
+    position: initial;
+}
+.products__detail {
+    border-bottom: solid 1px black;
+    .products__detail--img {
+        padding: 80px 15px 60px 15px;
+        border-right: 1px solid black;
+        .img__btn {
+            display: flex;
+            img {
+                margin: initial;
+                margin-right: 15px;
+                padding-top: 15px;
+            }
+        }
+    }
+    .products__detail-sum {
+        padding-top: 80px;
+        padding-right: 60px;
+        .detail__title {
+            font-size: 32px;
+            font-family: "main";
+            line-height: 40px;
+            @include tablet {
+                font-size: 26px;
+            }
+        }
+        .detail__price {
+            font-size: 18px;
+            font-weight: bold;
+            color: $brown-cl;
+            line-height: 54px;
+        }
+        .detail__info {
+            padding: 45px 0;
+            font-size: 14px;
+            line-height: 54px;
+            letter-spacing: 1;
+        }
+        .detail__sum {
+            line-height: 20px;
+            h3 {
+                font-size: 11px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.others {
+    .others__title {
+        text-align: center;
+        font-family: "main";
+        font-size: 18px;
+        line-height: 40px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    .grid {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        .carousel-cell--grid {
+            position: relative;
+            &:not(:nth-child(3n)) {
+                &:after {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: #ddd;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: -15px;
+                }
+            }
+            .flick__img {
+                overflow: hidden;
+                position: relative;
+                height: 350px;
+                img {
+                    position: absolute;
+                    transform: scale(1);
+                    width: 100%;
+                    height: 360px;
+                    max-width: initial;
+                    object-fit: cover;
+                    transform-origin: 50% 65%;
+                    transition: transform 0.5s, filter 3s ease-in-out;
+                }
+                &:hover img {
+                    filter: brightness(100%);
+                    transform: scale(1.2);
+                    opacity: 0.8;
+                }
+            }
+            .flick__sum {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &--title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 40px;
+                }
+                &--price {
+                    font-size: 12px;
+                    line-height: 40px;
+                }
+                &--detail {
+                    display: flex;
+                    align-items: center;
+                    .detail__img {
+                        padding-right: 8px;
+                        width: 20px;
+                    }
+                    .detail__sum {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+                &--left {
+                    padding-bottom: 45px;
+
+                    .flick__sum--title {
+                        font-size: 18px;
+                        font-weight: bold;
+                        line-height: 40px;
+                    }
+                    .flick__sum--price {
+                        font-size: 12px;
+                        line-height: 40px;
+                    }
+                    .flick__sum--detail {
+                        display: flex;
+                        align-items: center;
+                        .detail__img {
+                            padding-right: 8px;
+                            width: 20px;
+                        }
+                        .detail__sum {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        margin: 30px 0;
+    }
+}
+.contact__us-detail {
+    text-align: center;
+    .contact__title {
+        font-family: "main";
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .contact__sum {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .contact__button {
+        padding-bottom: 120px;
+        display: flex;
+        justify-content: center;
+        padding-top: 45px;
+        font-size: 11px;
+        font-weight: bold;
+        .contact-us {
+            margin-right: 30px;
+        }
+        a {
+            padding: 15px 45px;
+            border: 1px solid black;
+            transition: 0.4s;
+            &:hover {
+                color: white;
+                background-color: black;
+                transition: 0.4s;
+            }
+        }
+    }
+}
+@include mobile {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .flick__img {
+            height: 250px;
+        }
+        .flick__sum {
+            &--left {
+                padding-bottom: 30px;
+            }
+        }
+        .carousel-cell--grid {
+            position: relative;
+            &:not(:nth-child(3n)) {
+                &:after {
+                    content: "";
+                    height: 100%;
+                    width: 0px;
+                    background: #ddd;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: -15px;
+                }
+            }
+        }
+    }
+}

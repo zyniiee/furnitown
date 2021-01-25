@@ -1,0 +1,82 @@
+footer {
+    background-color: $blue-cl;
+    color: white;
+    font-size: 11px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    .container {
+        width: 100%;
+        padding: 150px 0 200px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
+        a {
+            color: white;
+            cursor: pointer;
+        }
+        .logo {
+            padding: 0 15px;
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "";
+                width: 45%;
+                height: 1px;
+                background-color: $yellow-cl;
+            }
+            &::after {
+                content: "";
+                width: 45%;
+                height: 1px;
+                background-color: $yellow-cl;
+            }
+        }
+        .toTop {
+            position: absolute;
+            right: -125px;
+            bottom: 170px;
+            display: flex;
+            align-items: center;
+            color: white;
+            transform: rotate(90deg);
+            letter-spacing: 2px;
+            padding: 10px;
+            cursor: pointer;
+            &::before {
+                content: "";
+                width: 150px;
+                height: 1px;
+                background-color: $yellow-cl;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &.footer__homepage {
+        margin-top: -350px;
+        padding-top: 400px;
+    }
+
+    @include desktop {
+    }
+    @include tablet {
+        margin-top: -200px;
+    }
+    @include mobile {
+        margin-top: -500px;
+        line-height: 1.8;
+        &.footer__homepage {
+            margin-top: -600px;
+        }
+        .info {
+            padding: 0 15px;
+        }
+    }
+    @include mobile-xxs {
+    }
+}
